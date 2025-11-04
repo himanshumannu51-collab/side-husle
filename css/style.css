@@ -1,85 +1,30 @@
-/* General */
+:root {
+  --color-bg: #F3F4F6;
+  --color-primary: #1F2937;
+  --color-accent: #FACC15;
+  --color-card: #FFFFFF;
+  --font-main: 'Poppins', sans-serif;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin:0;
-  padding:0;
-  background:#F3F4F6;
-  color:#1F2937;
+  font-family: var(--font-main);
+  margin:0; padding:0;
+  background: var(--color-bg);
+  color: var(--color-primary);
 }
 
 a { text-decoration:none; color: inherit; }
 
-nav {
-  background:#1F2937;
-  padding:15px 20px;
-}
-
-.nav-container {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.nav-links li {
-  display:inline-block;
-  margin-left:20px;
-}
-
-.nav-links a { color:white; font-weight:500; }
-
-.nav-links a.active { border-bottom:2px solid #FACC15; }
-
-.logo { font-weight:bold; font-size:1.5em; color:white; }
-
-/* Hero */
-.hero { text-align:center; padding:80px 20px; background:#EDE9FE; }
-.hero h1 { font-size:2.5em; margin-bottom:10px; }
-.hero p { font-size:1.2em; color:#4B5563; }
-
-/* Hustle Grid */
-.top-hustles { padding:40px 20px; max-width:1200px; margin:auto; }
-.hustle-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-  gap:20px;
-}
-
-/* Hustle Card */
 .hustle-card {
-  background:white;
+  background: var(--color-card);
   padding:20px;
   border-radius:12px;
   box-shadow:0 4px 12px rgba(0,0,0,0.1);
-  transition:transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor:pointer;
 }
 .hustle-card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
-.hustle-card h3 { margin:0 0 10px 0; }
-.hustle-card p { font-size:0.95em; color:#6B7280; }
-.hustle-card .earnings { font-weight:bold; color:#FACC15; margin-top:10px; }
-
-/* Why It Works */
-.why-it-works { padding:60px 20px; text-align:center; }
-.why-it-works h2 { font-size:2em; margin-bottom:40px; }
-.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-.card { background:white; padding:20px; border-radius:12px; width:250px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-.card h3 { margin-bottom:10px; color:#3B82F6; }
-
-/* Categories */
-.categories { padding:60px 20px; text-align:center; }
-.category-grid { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px; }
-.category-card { background:white; padding:15px 25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; transition:transform 0.2s; }
-.category-card:hover { transform:translateY(-5px); }
-
-/* Newsletter */
-.newsletter { background:#EDE9FE; text-align:center; padding:60px 20px; }
-.newsletter input { padding:12px; width:250px; border-radius:6px; border:1px solid #D1D5DB; margin-right:10px; }
-.newsletter button { padding:12px 20px; border:none; border-radius:6px; background:#FACC15; color:white; cursor:pointer; font-weight:bold; }
-.newsletter button:hover { background:#FBBF24; }
-
-/* Footer */
-footer { text-align:center; padding:40px 20px; background:#1F2937; color:white; }
-footer a { color:#F3F4F6; margin:0 10px; font-size:0.9em; }
+.hustle-card .earnings { font-weight:bold; color: var(--color-accent); margin-top:10px; }
