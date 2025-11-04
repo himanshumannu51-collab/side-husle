@@ -1,12 +1,101 @@
-<!-- Page Header / Hero Section -->
-<section class="hero" style="padding: 60px 20px; background-color:#0F172A; color:#FFFFFF; text-align:center;">
-    <h1 style="font-family:'Poppins', sans-serif; font-size:3rem; font-weight:700; margin-bottom:20px;">
-        💼 AI Side Hustles That Actually Make You Money
-    </h1>
-    <p style="font-family:'Inter', sans-serif; font-size:1.25rem; margin-bottom:30px; color:#FACC15;">
-        Discover actionable AI tools, step-by-step workflows, and estimated earnings to kickstart your side hustle today.
-    </p>
-    <a href="#hustlesGrid" style="background-color:#FACC15; color:#0F172A; font-weight:700; padding:15px 30px; border-radius:12px; text-decoration:none; font-size:1rem;">
-        Explore Hustles Now
-    </a>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all 50+ AI side hustles. Filter by category, difficulty, and earnings potential.">
+    <title>All AI Side Hustles - Complete Directory</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🚀 AI Side Hustles</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hustles.html">All Hustles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 60px 20px; text-align:center;">
+        <h1>💼 AI Side Hustles That Actually Make You Money</h1>
+        <p style="color:#FACC15;">
+            Actionable AI tools, step-by-step workflows, and estimated earnings to kickstart your side hustle today.
+        </p>
+        <a href="#hustlesGrid" class="btn btn-primary">Explore Hustles Now</a>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="content-section">
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search hustles by name, skill, or keyword..." 
+                onkeyup="filterHustles()"
+            >
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCategory('all')">All Hustles</button>
+            <button class="filter-btn" onclick="filterCategory('content')">📝 Content Creation</button>
+            <button class="filter-btn" onclick="filterCategory('design')">🎨 Design</button>
+            <button class="filter-btn" onclick="filterCategory('coding')">💻 Coding</button>
+            <button class="filter-btn" onclick="filterCategory('business')">💼 Business</button>
+            <button class="filter-btn" onclick="filterCategory('education')">🎓 Education</button>
+        </div>
+
+        <!-- Results Count -->
+        <p style="text-align: center; color: #666; margin-top: 20px; font-size: 1.1em;">
+            <span id="resultsCount">0</span> opportunities available
+        </p>
+    </section>
+
+    <!-- Hustles Grid -->
+    <section class="content-section">
+        <div class="hustles-grid" id="hustlesGrid">
+            <!-- Hustles populated by JS -->
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="content-section" style="text-align: center; padding: 60px 20px;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px;">Ready to Start Your AI Journey?</h2>
+        <p style="font-size: 1.2em; color: #666; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Get our free guide with step-by-step instructions to start your first AI side hustle this week.
+        </p>
+        <a href="#newsletter" class="btn btn-primary">Download Free Guide</a>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <h2>📧 Never Miss New AI Opportunities</h2>
+        <p>Get weekly updates on the latest AI side hustles and money-making strategies</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Join Free</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Side Hustles. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Affiliate Disclosure</a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
