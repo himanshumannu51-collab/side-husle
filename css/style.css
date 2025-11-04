@@ -1,582 +1,85 @@
-/* ==========================================
-   AI SIDE HUSTLES - MAIN STYLESHEET
-   ========================================== */
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding:0;
+  background:#F3F4F6;
+  color:#1F2937;
 }
 
-/* ==========================================
-   NAVIGATION
-   ========================================== */
+a { text-decoration:none; color: inherit; }
+
 nav {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background:#1F2937;
+  padding:15px 20px;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s;
+.nav-links li {
+  display:inline-block;
+  margin-left:20px;
 }
 
-.logo:hover {
-    opacity: 0.9;
+.nav-links a { color:white; font-weight:500; }
+
+.nav-links a.active { border-bottom:2px solid #FACC15; }
+
+.logo { font-weight:bold; font-size:1.5em; color:white; }
+
+/* Hero */
+.hero { text-align:center; padding:80px 20px; background:#EDE9FE; }
+.hero h1 { font-size:2.5em; margin-bottom:10px; }
+.hero p { font-size:1.2em; color:#4B5563; }
+
+/* Hustle Grid */
+.top-hustles { padding:40px 20px; max-width:1200px; margin:auto; }
+.hustle-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.3s;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-.nav-links a:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-/* ==========================================
-   HERO SECTION
-   ========================================== */
-.hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    animation: fadeInUp 0.8s ease;
-}
-
-.hero p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    opacity: 0.95;
-    animation: fadeInUp 1s ease;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    animation: fadeInUp 1.2s ease;
-}
-
-/* ==========================================
-   BUTTONS
-   ========================================== */
-.btn {
-    padding: 15px 40px;
-    font-size: 1.1em;
-    font-weight: 600;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn-primary {
-    background: white;
-    color: #667eea;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* ==========================================
-   STATS SECTION
-   ========================================== */
-.stats {
-    background: #f8f9fa;
-    padding: 60px 20px;
-}
-
-.stats-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    text-align: center;
-}
-
-.stat-item {
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-}
-
-.stat-number {
-    font-size: 3em;
-    font-weight: 700;
-    color: #667eea;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 1.1em;
-    color: #666;
-}
-
-/* ==========================================
-   CONTENT SECTIONS
-   ========================================== */
-.content-section {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.section-subtitle {
-    text-align: center;
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ==========================================
-   SEARCH AND FILTER
-   ========================================== */
-.search-container {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-#searchInput {
-    flex: 1;
-    min-width: 250px;
-    padding: 15px 20px;
-    font-size: 1em;
-    border: 2px solid #e0e0e0;
-    border-radius: 50px;
-    transition: border-color 0.3s;
-}
-
-#searchInput:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-.filter-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.filter-btn {
-    padding: 12px 25px;
-    background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 500;
-    font-size: 1em;
-}
-
-.filter-btn:hover, .filter-btn.active {
-    background: #667eea;
-    color: white;
-    border-color: #667eea;
-}
-
-/* ==========================================
-   HUSTLES GRID
-   ========================================== */
-.hustles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
+/* Hustle Card */
 .hustle-card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition:transform 0.2s, box-shadow 0.2s;
+  cursor:pointer;
 }
-
 .hustle-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transform:translateY(-5px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
+.hustle-card h3 { margin:0 0 10px 0; }
+.hustle-card p { font-size:0.95em; color:#6B7280; }
+.hustle-card .earnings { font-weight:bold; color:#FACC15; margin-top:10px; }
 
-.hustle-icon {
-    font-size: 3em;
-    margin-bottom: 15px;
-}
+/* Why It Works */
+.why-it-works { padding:60px 20px; text-align:center; }
+.why-it-works h2 { font-size:2em; margin-bottom:40px; }
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.card { background:white; padding:20px; border-radius:12px; width:250px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.card h3 { margin-bottom:10px; color:#3B82F6; }
 
-.hustle-title {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-}
+/* Categories */
+.categories { padding:60px 20px; text-align:center; }
+.category-grid { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px; }
+.category-card { background:white; padding:15px 25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; transition:transform 0.2s; }
+.category-card:hover { transform:translateY(-5px); }
 
-.hustle-description {
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
+/* Newsletter */
+.newsletter { background:#EDE9FE; text-align:center; padding:60px 20px; }
+.newsletter input { padding:12px; width:250px; border-radius:6px; border:1px solid #D1D5DB; margin-right:10px; }
+.newsletter button { padding:12px 20px; border:none; border-radius:6px; background:#FACC15; color:white; cursor:pointer; font-weight:bold; }
+.newsletter button:hover { background:#FBBF24; }
 
-.hustle-tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-}
-
-.tag {
-    padding: 5px 12px;
-    background: #f0f0f0;
-    border-radius: 20px;
-    font-size: 0.85em;
-    color: #666;
-}
-
-.hustle-earnings {
-    font-weight: 700;
-    color: #667eea;
-    font-size: 1.1em;
-}
-
-.hustle-difficulty {
-    display: inline-block;
-    padding: 5px 12px;
-    background: #e8f5e9;
-    color: #2e7d32;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-/* ==========================================
-   ABOUT PAGE
-   ========================================== */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-.about-content h2 {
-    color: #667eea;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.mission-box {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 40px;
-    border-radius: 15px;
-    margin: 40px 0;
-    text-align: center;
-}
-
-.mission-box h2 {
-    color: white;
-    margin-bottom: 15px;
-}
-
-/* ==========================================
-   CONTACT FORM
-   ========================================== */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1em;
-    font-family: inherit;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-}
-
-/* ==========================================
-   NEWSLETTER SECTION
-   ========================================== */
-.newsletter {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.newsletter h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.newsletter p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    opacity: 0.95;
-}
-
-.newsletter-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    gap: 10px;
-}
-
-.newsletter-form input {
-    flex: 1;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1em;
-}
-
-.newsletter-form button {
-    padding: 15px 35px;
-    background: white;
-    color: #667eea;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.newsletter-form button:hover {
-    transform: scale(1.05);
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-footer {
-    background: #2d3748;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-footer p {
-    margin-bottom: 15px;
-    opacity: 0.9;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.footer-links a:hover {
-    opacity: 0.7;
-}
-
-/* ==========================================
-   ANIMATIONS
-   ========================================== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 2.2em;
-    }
-
-    .hero p {
-        font-size: 1.1em;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-title {
-        font-size: 2em;
-    }
-
-    .hustles-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .stats-container {
-        grid-template-columns: 1fr;
-    }
-
-    .search-container {
-        flex-direction: column;
-    }
-
-    #searchInput {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8em;
-    }
-
-    .stat-number {
-        font-size: 2.5em;
-    }
-
-    .contact-form {
-        padding: 25px;
-    }
-}
+/* Footer */
+footer { text-align:center; padding:40px 20px; background:#1F2937; color:white; }
+footer a { color:#F3F4F6; margin:0 10px; font-size:0.9em; }
