@@ -1,72 +1,66 @@
-// Hustles Data (start with first 5 examples)
-const hustles = [
-    {
-        title: "AI Blog Writer",
-        category: "content",
-        description: "Create blog posts using Jasper or Copy.ai.",
-        earnings: "$200–$500/month",
-        time: "2–3 hours",
-        link: "#"
-    },
-    {
-        title: "AI Video Creator",
-        category: "content",
-        description: "Turn blogs into videos with Pictory or Synthesia.",
-        earnings: "$250+/month",
-        time: "3–4 hours",
-        link: "#"
-    },
-    {
-        title: "AI Voiceover Service",
-        category: "business",
-        description: "Create voiceovers for videos using Murf.ai.",
-        earnings: "$75–$200/project",
-        time: "1–2 hours",
-        link: "#"
-    },
-    {
-        title: "AI Logo Designer",
-        category: "design",
-        description: "Design logos using Looka or Canva AI.",
-        earnings: "$50–$300/logo",
-        time: "1–2 hours",
-        link: "#"
-    },
-    {
-        title: "AI Resume Builder",
-        category: "education",
-        description: "Help clients create professional resumes using AI tools.",
-        earnings: "$25–$100/resume",
-        time: "30–60 min",
-        link: "#"
-    }
-];
-
-// Render Hustles
-function renderHustles(hustlesToRender) {
-    const grid = document.getElementById('hustlesGrid');
-    grid.innerHTML = ""; // clear previous
-
-    hustlesToRender.forEach(hustle => {
-        const card = document.createElement('div');
-        card.className = 'hustle-card';
-        card.dataset.category = hustle.category;
-        card.style = "background:#F3F4F6; padding:20px; border-radius:12px; width:300px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin:10px;";
-
-        card.innerHTML = `
-            <h3>${hustle.title}</h3>
-            <p>${hustle.description}</p>
-            <p><strong>Earnings:</strong> ${hustle.earnings}</p>
-            <p><strong>Time to start:</strong> ${hustle.time}</p>
-            <a href="${hustle.link}" class="btn btn-primary">See How →</a>
-        `;
-        grid.appendChild(card);
-    });
-
-    updateResultsCount();
-}
-
-// Initial render
-renderHustles(hustles);
-
-// Existing filters/search functions remain unchanged
+[
+  {
+    "id": "ai-blog-writer",
+    "title": "AI Blog Writer",
+    "description": "Create blog posts with AI tools like Jasper.",
+    "earnings": "$200–$500/mo",
+    "category": "Content",
+    "link": "hustles/ai-blog-writer.html"
+  },
+  {
+    "id": "ai-video-creator",
+    "title": "AI Video Creator",
+    "description": "Turn blogs into videos using Pictory or Synthesia.",
+    "earnings": "$250–$600/mo",
+    "category": "Content",
+    "link": "hustles/ai-video-creator.html"
+  },
+  {
+    "id": "ai-voiceover",
+    "title": "AI Voiceover Service",
+    "description": "Create professional voiceovers with Murf.ai.",
+    "earnings": "$75–$200/project",
+    "category": "Content",
+    "link": "hustles/ai-voiceover.html"
+  },
+  {
+    "id": "ai-logo-designer",
+    "title": "AI Logo Designer",
+    "description": "Design logos using Looka or Canva AI.",
+    "earnings": "$50–$300/logo",
+    "category": "Design",
+    "link": "hustles/ai-logo-designer.html"
+  },
+  {
+    "id": "ai-resume-builder",
+    "title": "AI Resume Builder",
+    "description": "Help clients create resumes with AI.",
+    "earnings": "$25–$100/resume",
+    "category": "Business",
+    "link": "hustles/ai-resume-builder.html"
+  },
+  {
+    "id": "ai-social-media",
+    "title": "AI Social Media Scheduler",
+    "description": "Automate posts and content planning.",
+    "earnings": "$150–$400/mo",
+    "category": "Business",
+    "link": "hustles/ai-social-media.html"
+  },
+  {
+    "id": "ai-ad-copy",
+    "title": "AI Ad Copy Creator",
+    "description": "Generate high converting ad copies with AI.",
+    "earnings": "$200–$600/mo",
+    "category": "Business",
+    "link": "hustles/ai-ad-copy.html"
+  },
+  {
+    "id": "ai-course-creator",
+    "title": "AI Course Creator",
+    "description": "Build mini online courses using AI tools.",
+    "earnings": "$300–$1000/mo",
+    "category": "Education",
+    "link": "hustles/ai-course-creator.html"
+  }
+]
