@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AI Side Hustles - Get in touch with questions, suggestions, or partnership opportunities.">
+    <title>Contact Us - AI Side Hustles</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🚀 AI Side Hustles</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hustles.html">All Hustles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 20px;">
+        <h1>📬 Get In Touch</h1>
+        <p>We'd love to hear from you! Questions, feedback, or partnership ideas - reach out below.</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="content-section">
+        <form class="contact-form" onsubmit="submitContact(event)">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Send Us A Message</h2>
+            
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="John Doe" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email *</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="john@example.com" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    placeholder="What's this about?"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Tell us what's on your mind..." 
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="content-section" style="margin-top: 60px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">Other Ways to Connect</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 3em; margin-bottom: 15px;">📧</div>
+                    <h3 style="margin-bottom: 10px; color: #667eea;">Email Us</h3>
+                    <p style="color: #666;">support@aisidehustles.com</p>
+                    <p style="color: #999; font-size: 0.9em; margin-top: 10px;">We typically respond within 24 hours</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 3em; margin-bottom: 15px;">💬</div>
+                    <h3 style="margin-bottom: 10px; color: #667eea;">Social Media</h3>
+                    <p style="color: #666;">@aisidehustles</p>
+                    <p style="color: #999; font-size: 0.9em; margin-top: 10px;">Follow for daily AI tips</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                    <div style="font-size: 3em; margin-bottom: 15px;">🤝</div>
+                    <h3 style="margin-bottom: 10px; color: #667eea;">Partnerships</h3>
+                    <p style="color: #666;">partners@aisidehustles.com</p>
+                    <p style="color: #999; font-size: 0.9em; margin-top: 10px;">Collaborate with us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="margin-top: 80px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">Are the side hustles really free to start?</h3>
+                <p style="color: #666; line-height: 1.8;">Most of them! Many AI side hustles use free AI tools and platforms. Some may require small investments for premium features, but we always mention this upfront.</p>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">Do I need coding skills?</h3>
+                <p style="color: #666; line-height: 1.8;">No! Most hustles on our site require zero coding. We specifically focus on opportunities accessible to beginners.</p>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">How do you verify these hustles work?</h3>
+                <p style="color: #666; line-height: 1.8;">We research each opportunity, check reviews, verify earning reports, and often test them ourselves before listing.</p>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">Can I suggest a hustle to add?</h3>
+                <p style="color: #666; line-height: 1.8;">Absolutely! Use the contact form above to share AI side hustles you've discovered or tried.</p>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                <h3 style="color: #667eea; margin-bottom: 10px;">Do you offer personal coaching?</h3>
+                <p style="color: #666; line-height: 1.8;">Not at the moment, but we provide extensive free resources. For specific questions, email us!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" style="margin-top: 80px;">
+        <h2>📧 Stay Updated</h2>
+        <p>Get new AI side hustles delivered to your inbox every week</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe Free</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Side Hustles. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Affiliate Disclosure</a>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
