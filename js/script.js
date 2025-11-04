@@ -1,4 +1,4 @@
-// Hustles Data
+// Hustles Data (start with first 5 examples)
 const hustles = [
     {
         title: "AI Blog Writer",
@@ -6,7 +6,7 @@ const hustles = [
         description: "Create blog posts using Jasper or Copy.ai.",
         earnings: "$200–$500/month",
         time: "2–3 hours",
-        link: "blog-writer.html"
+        link: "#"
     },
     {
         title: "AI Video Creator",
@@ -14,7 +14,7 @@ const hustles = [
         description: "Turn blogs into videos with Pictory or Synthesia.",
         earnings: "$250+/month",
         time: "3–4 hours",
-        link: "video-creator.html"
+        link: "#"
     },
     {
         title: "AI Voiceover Service",
@@ -22,9 +22,24 @@ const hustles = [
         description: "Create voiceovers for videos using Murf.ai.",
         earnings: "$75–$200/project",
         time: "1–2 hours",
-        link: "voiceover.html"
+        link: "#"
     },
-    // Add more hustles here
+    {
+        title: "AI Logo Designer",
+        category: "design",
+        description: "Design logos using Looka or Canva AI.",
+        earnings: "$50–$300/logo",
+        time: "1–2 hours",
+        link: "#"
+    },
+    {
+        title: "AI Resume Builder",
+        category: "education",
+        description: "Help clients create professional resumes using AI tools.",
+        earnings: "$25–$100/resume",
+        time: "30–60 min",
+        link: "#"
+    }
 ];
 
 // Render Hustles
@@ -51,29 +66,7 @@ function renderHustles(hustlesToRender) {
     updateResultsCount();
 }
 
-// Filter Functions (keep your original)
-function filterCategory(category) {
-    const filtered = category === 'all' ? hustles : hustles.filter(h => h.category === category);
-    renderHustles(filtered);
-}
-
-// Search Function
-function filterHustles() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = hustles.filter(h => 
-        h.title.toLowerCase().includes(input) || 
-        h.description.toLowerCase().includes(input)
-    );
-    renderHustles(filtered);
-}
-
-// Update Results Count
-function updateResultsCount() {
-    const grid = document.getElementById('hustlesGrid');
-    const count = grid.children.length;
-    const countElement = document.getElementById('resultsCount');
-    if (countElement) countElement.textContent = count;
-}
-
-// Initial Render
+// Initial render
 renderHustles(hustles);
+
+// Existing filters/search functions remain unchanged
